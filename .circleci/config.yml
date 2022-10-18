@@ -19,5 +19,4 @@ jobs:
           else
             echo OK
           fi
-          docker network create -d bridge testing_network
           echo "end"
