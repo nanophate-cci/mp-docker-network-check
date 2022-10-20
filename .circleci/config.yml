@@ -5,9 +5,8 @@ jobs:
     steps:
     - run: which docker
     - run: docker -v
-    - setup_remote_docker:
-        version: 20.10.7
-        docker_layer_caching: true
+    - setup_remote_docker
+    - run: docker network ls -f name=testing_network -q
     - run:
         name: Build a really docker image
         command: |
